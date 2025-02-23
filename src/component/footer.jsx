@@ -11,7 +11,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-gray-300 pt-10 pb-4">
+    <footer className="bg-gray-800 text-gray-300 pt-10 pb-4 font-sans">
       <div className="max-w-6xl mx-auto px-4">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -21,7 +21,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-bold text-white mb-4">Quick Links</h4>
+            <h4 className="text-xl font-bold text-white mb-4 font-montserrat">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -41,7 +43,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#about"
+                  href="#about-us"
                   className="hover:text-white transition duration-300"
                 >
                   About Us
@@ -49,7 +51,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="#contact-us"
                   className="hover:text-white transition duration-300"
                 >
                   Contact
@@ -60,7 +62,9 @@ const Footer = () => {
 
           {/* About Us */}
           <div>
-            <h4 className="text-xl font-bold text-white mb-4">About Us</h4>
+            <h4 className="text-xl font-bold text-white mb-4 font-montserrat">
+              About Us
+            </h4>
             <p className="text-gray-400">
               We are dedicated to delivering the best products and services to
               our clients. Our team is passionate and driven to create
