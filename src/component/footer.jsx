@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/images/logo.png';
 import {
   FaGithub,
   FaLinkedin,
@@ -15,8 +16,16 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <img src="logo" alt="logo" />
+          {/* Logo and Name */}
+          <div className="flex items-center gap-1">
+            <img
+              src={logo}
+              alt="logo"
+              className="w-16 h-auto transform hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+            />
+            <span className="text-xl font-bold text-white font-montserrat">
+              Automated Irrigation
+            </span>
           </div>
 
           {/* Quick Links */}

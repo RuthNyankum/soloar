@@ -1,13 +1,15 @@
 import React from 'react';
+import img from '../../assets/images/img2.webp';
+import img1 from '../../assets/images/img5.webp';
 
 const ProjectSection = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24 font-sans">
       {/* Image Section */}
       <div className="relative w-full max-w-lg mx-auto md:max-w-none">
         <div className="aspect-square rounded-lg overflow-hidden">
           <img
-            src="/api/placeholder/600/600"
+            src={img}
             alt="Solar-powered irrigation system"
             className="w-full h-full object-cover"
           />
@@ -20,42 +22,56 @@ const ProjectSection = () => {
       {/* Content Section */}
       <div className="space-y-6">
         <div className="inline-block">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 font-montserrat">
             Transforming Agriculture
           </h2>
-          <div className="h-1 w-24 bg-green-500"></div>
+          <div className="h-1 w-24 bg-primary"></div>
         </div>
 
         <div className="space-y-4 text-gray-600">
           <p className="text-sm md:text-base">
-            From the heart of Nkronza South in Ghana's Bono East Region, we're
-            revolutionizing agricultural practices through innovative
-            solar-powered irrigation solutions. Our mission is to empower
-            farmers with reliable water access, enabling sustainable year-round
-            farming regardless of rainfall patterns.
+            An automated solar-powered irrigation system designed to provide
+            smallholder farmers with a reliable and cost-effective water supply
+            solution. The system regulates water usage based on soil moisture
+            levels, reducing water wastage and optimizing crop hydration.
+            {/* An automated solar-powered irrigation system designed to provide
+            smallholder farmers with a reliable and cost-effective water supply
+            solution. The system regulates water usage based on soil moisture
+            levels, reducing water wastage and optimizing crop hydration. */}
           </p>
 
           <p className="text-sm md:text-base">
-            Our system harnesses solar energy to provide consistent water
+            To provide smallholder farmers with affordable, reliable and
+            sustainable automated solar powered irrigation system that can boost
+            their yeild, prevent crop failure and boost income
+            {/* Our system harnesses solar energy to provide consistent water
             supply, directly addressing one of the most critical challenges
             facing local farmers. This technology not only improves crop yields
             but also strengthens community resilience against climate change
-            impacts.
+            impacts. */}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-6">
-            <div className="border-l-4 border-green-500 pl-4">
-              <h3 className="font-bold text-gray-900">Our Vision</h3>
+            <div className="border-l-4 border-primary pl-4">
+              <h3 className="font-bold text-gray-900 font-montserrat">
+                Our Vision
+              </h3>
               <p className="text-sm mt-2">
-                To create a future where every farmer has access to reliable,
-                sustainable irrigation solutions.
+                To revolutionize smallholder farming in Ghana by ensuring
+                year-round access to reliable and affordable irrigation
+                solutions, increasing agricultural productivity and
+                sustainability.
               </p>
             </div>
-            <div className="border-l-4 border-green-500 pl-4">
-              <h3 className="font-bold text-gray-900">Our Impact</h3>
+            <div className="border-l-4 border-primary pl-4">
+              <h3 className="font-bold text-gray-900 font-montserrat">
+                Our Mission
+              </h3>
               <p className="text-sm mt-2">
-                Enabling year-round farming, improving yields, and ensuring
-                stable income for farming communities.
+                To empower smallholder farmers with a cost-effective,
+                solar-powered automated irrigation system that enhances yield,
+                prevents crop failure, and boosts income while promoting
+                environmental sustainability.
               </p>
             </div>
           </div>
@@ -101,9 +117,9 @@ const ProjectSection = () => {
           </div>
         </div>
 
-        <button className="w-full sm:w-auto mt-8 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors">
+        {/* <button className="w-full sm:w-auto mt-8 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors">
           Learn More About Our Impact
-        </button>
+        </button> */}
       </div>
     </div>
   );
@@ -111,7 +127,7 @@ const ProjectSection = () => {
 
 const InnovatorSection = () => {
   return (
-    <div className="bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-12 relative overflow-hidden">
+    <div className="bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-12 relative overflow-hidden font-sans">
       {/* Background decoration - adjusted for mobile */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-green-100 -skew-x-12 transform origin-top-right"></div>
 
@@ -121,12 +137,12 @@ const InnovatorSection = () => {
           <div className="relative max-w-[200px] md:max-w-none mx-auto">
             <div className="aspect-square rounded-full overflow-hidden border-4 border-white shadow-xl">
               <img
-                src="/api/placeholder/400/400"
-                alt="John Doe - Lead Innovator"
+                src={img1}
+                alt="Richard Ankrah Amponsah - Lead Innovator"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 right-0 bg-green-500 text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold">
+            <div className="absolute -bottom-4 right-0 bg-primary text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold">
               Lead Innovator
             </div>
           </div>
@@ -135,27 +151,27 @@ const InnovatorSection = () => {
         {/* Content Column */}
         <div className="md:col-span-2 space-y-4 md:space-y-6">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-              John Doe
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 font-montserrat">
+              Richard Ankrah Amponsah
             </h2>
-            <p className="text-green-600 font-semibold text-sm md:text-base">
+            <p className="text-primary font-semibold text-sm md:text-base">
               Agricultural Innovation Specialist
             </p>
           </div>
 
           <div className="prose text-gray-600 text-sm md:text-base">
             <p>
-              As the founder and lead innovator, John Doe brings over 15 years
-              of experience in sustainable agriculture and renewable energy
-              solutions. His vision for combining solar technology with
+              As the founder and lead innovator, Richard Ankrah Amponsah over 5
+              years of experience in sustainable agriculture and renewable
+              energy solutions. His vision for combining solar technology with
               traditional farming practices has transformed the agricultural
               landscape in Ghana.
             </p>
             <p>
-              Having grown up in a farming community, John understands the
+              Having grown up in a farming community, Richard understands the
               challenges faced by local farmers firsthand. His innovative
               approach to sustainable farming has earned recognition from
-              various international organizations.
+              various regions in Ghana.
             </p>
           </div>
 
@@ -179,11 +195,12 @@ const InnovatorSection = () => {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm md:text-base">
-                  Innovation Award
+                  Community Impact
                 </h3>
               </div>
               <p className="text-xs md:text-sm text-gray-600">
-                Recipient of the 2023 Innovation in Agriculture Award
+                Making a difference by supporting local farmers with innovative
+                solutions.
               </p>
             </div>
 
@@ -200,16 +217,17 @@ const InnovatorSection = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
+                      d="M12 4v16m8-8H4"
                     ></path>
                   </svg>
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm md:text-base">
-                  Featured In
+                  Future Goals
                 </h3>
               </div>
               <p className="text-xs md:text-sm text-gray-600">
-                National Geographic Spotlight on Agricultural Innovation
+                Committed to expanding sustainable agriculture practices
+                nationwide.
               </p>
             </div>
           </div>
@@ -223,6 +241,7 @@ const About = () => {
   return (
     <div className="bg-white py-8 md:py-16">
       <div className="max-w-6xl mx-auto px-4">
+        <h1 className="font-montserrat font-bold text-3xl">About Us</h1>
         <ProjectSection />
         <InnovatorSection />
       </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,8 +55,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gray-800">
-            Automated Irrigation
+          <div className="flex items-center gap-1">
+            <img
+              src={logo}
+              alt="logo"
+              className="w-16 h-auto transform hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
+            />
+            <span className="text-xl font-bold text-primary font-montserrat">
+              Automated Irrigation
+            </span>
           </div>
 
           {/* Desktop Menu */}
