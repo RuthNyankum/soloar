@@ -241,7 +241,7 @@ const About = () => {
   return (
     <div className="bg-white py-8 md:py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="font-montserrat font-bold text-3xl">About Us</h1>
+        <h1 className="font-montserrat font-bold text-3xl mb-2">About Us</h1>
         <ProjectSection />
         <InnovatorSection />
       </div>

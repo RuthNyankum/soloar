@@ -1,12 +1,15 @@
 import React from 'react';
+import img1 from '../../assets/images/img1.webp';
+import img2 from '../../assets/images/img2.webp';
+import img3 from '../../assets/images/img4.webp';
 
 const Product = () => {
   return (
-    <div className="bg-white py-16">
+    <div className="bg-white py-16 font-sans">
       <div className="max-w-6xl mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-montserrat">
             Solar-Powered Irrigation Solutions
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -19,54 +22,53 @@ const Product = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
             <img
-              src="/api/placeholder/400/300"
+              src={img1}
               alt="Solar panels powering the irrigation system"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
             <img
-              src="/api/placeholder/400/300"
+              src={img2}
               alt="Drip irrigation system in action"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
             <img
-              src="/api/placeholder/400/300"
+              src={img3}
               alt="Flourishing crops using our irrigation system"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
 
-        {/* Rest of the component remains exactly the same */}
         {/* Main Product Display */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative">
             <div className="aspect-video rounded-xl overflow-hidden bg-green-50">
               <img
-                src="/api/placeholder/600/400"
+                src={img2}
                 alt="Solar irrigation system in action"
                 className="w-full h-full object-cover"
               />
             </div>
             {/* Feature Badges */}
             <div className="absolute -right-4 top-4 space-y-2">
-              <div className="bg-white px-4 py-2 rounded-l-full shadow-lg text-sm font-medium text-green-600">
+              <div className="bg-white px-4 py-2 rounded-l-full shadow-lg text-sm font-medium text-primary">
                 Solar Powered
               </div>
-              <div className="bg-white px-4 py-2 rounded-l-full shadow-lg text-sm font-medium text-green-600">
+              <div className="bg-white px-4 py-2 rounded-l-full shadow-lg text-sm font-medium text-primary">
                 Water Efficient
               </div>
-              <div className="bg-white px-4 py-2 rounded-l-full shadow-lg text-sm font-medium text-green-600">
+              <div className="bg-white px-4 py-2 rounded-l-full shadow-lg text-sm font-medium text-primary">
                 Low Maintenance
               </div>
             </div>
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-gray-900">
+            <h3 className="text-3xl font-bold text-gray-900 font-montserrat">
               Advanced Irrigation Technology
             </h3>
             <p className="text-gray-600">
@@ -83,7 +85,7 @@ const Product = () => {
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-green-600"
+                      className="w-6 h-6 text-primary"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -96,7 +98,7 @@ const Product = () => {
                       />
                     </svg>
                   </div>
-                  <h4 className="font-semibold text-gray-900">
+                  <h4 className="font-semibold text-gray-900 font-montserrat">
                     Year-Round Farming
                   </h4>
                 </div>
@@ -123,7 +125,7 @@ const Product = () => {
                       />
                     </svg>
                   </div>
-                  <h4 className="font-semibold text-gray-900">
+                  <h4 className="font-semibold text-gray-900 font-montserrat">
                     Improved Yields
                   </h4>
                 </div>
@@ -137,7 +139,7 @@ const Product = () => {
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-green-600"
+                      className="w-6 h-6 text-primary"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -150,7 +152,7 @@ const Product = () => {
                       />
                     </svg>
                   </div>
-                  <h4 className="font-semibold text-gray-900">
+                  <h4 className="font-semibold text-gray-900 font-montserrat">
                     Income Stability
                   </h4>
                 </div>
@@ -164,7 +166,7 @@ const Product = () => {
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-green-600"
+                      className="w-6 h-6 text-primary"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -177,7 +179,7 @@ const Product = () => {
                       />
                     </svg>
                   </div>
-                  <h4 className="font-semibold text-gray-900">
+                  <h4 className="font-semibold text-gray-900 font-montserrat">
                     Climate Resilient
                   </h4>
                 </div>
@@ -191,12 +193,12 @@ const Product = () => {
 
         {/* Technical Specifications */}
         <div className="bg-green-50 rounded-2xl p-8 mb-20">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 font-montserrat">
             System Specifications
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="font-semibold text-gray-900 mb-2">
+            <div className="border-l-4 border-primary pl-4">
+              <h4 className="font-semibold text-gray-900 mb-2 font-montserrat">
                 Solar Components
               </h4>
               <ul className="text-sm text-gray-600 space-y-2">
@@ -206,8 +208,8 @@ const Product = () => {
                 <li>Weather-resistant housing</li>
               </ul>
             </div>
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="font-semibold text-gray-900 mb-2">
+            <div className="border-l-4 border-primary pl-4">
+              <h4 className="font-semibold text-gray-900 mb-2 font-montserrat">
                 Irrigation System
               </h4>
               <ul className="text-sm text-gray-600 space-y-2">
@@ -217,8 +219,10 @@ const Product = () => {
                 <li>Filtration system</li>
               </ul>
             </div>
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="font-semibold text-gray-900 mb-2">Monitoring</h4>
+            <div className="border-l-4 border-primary pl-4">
+              <h4 className="font-semibold text-gray-900 mb-2 font-montserrat">
+                Monitoring
+              </h4>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>Soil moisture sensors</li>
                 <li>Water flow meters</li>
@@ -231,7 +235,7 @@ const Product = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4 font-montserrat">
             Ready to Transform Your Farm?
           </h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -239,7 +243,7 @@ const Product = () => {
             solar-powered irrigation solution. Get in touch to learn how we can
             help improve your farm's productivity.
           </p>
-          <button className="bg-green-500 text-white px-8 py-4 rounded-lg hover:bg-green-600 transition-colors font-semibold">
+          <button className="bg-priborder-primary text-white px-8 py-4 rounded-lg hover:bg-primary transition-colors font-semibold">
             Request a Consultation
           </button>
         </div>
