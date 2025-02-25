@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative bg-primary font-sans">
+      <div className="relative bg-primary font-sans scroll-smooth">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[120%] h-[120%] bg-green-100 -rotate-3 transform origin-top-left"></div>
         </div>
@@ -15,25 +15,21 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="text-5xl font-bold text-gray-900 leading-tight font-montserrat">
-                {/* Smart Irrigation for Sustainable Growth */}
                 Smart Irrigation for Sustainable Growth
               </h1>
               <p className="text-xl text-gray-600">
-                Transforming agriculture advanced solar-powered irrigation
+                Transforming agriculture with advanced solar-powered irrigation
                 systems. Enabling year-round farming and improving lives.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-green-500 text-white px-8 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold">
+                {/* <button className="bg-green-500 text-white px-8 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold">
                   Get Started
-                </button>
-                <button className="border-2 border-green-500 text-green-500 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold">
-                  Learn More
-                </button>
-                {/* <Link to="/about-us">
+                </button> */}
+                <a href="#about-us">
                   <button className="border-2 border-green-500 text-green-500 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold">
                     Learn More
                   </button>
-                </Link> */}
+                </a>
               </div>
             </div>
 
@@ -45,7 +41,6 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Stats overlay */}
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
                 <div className="grid grid-cols-2 gap-6">
                   <div>
@@ -64,7 +59,7 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-white font-sans">
+      <div id="about-us" className="py-20 bg-white font-sans">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 font-montserrat">
@@ -72,7 +67,7 @@ const Home = () => {
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our innovative solar-powered irrigation system is designed to
-              address the unique challenges faced by farmers .
+              address the unique challenges faced by farmers.
             </p>
           </div>
 
@@ -133,17 +128,17 @@ const Home = () => {
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 text-primary"
+                  class="w-6 h-6 text-primary"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  strokeWidth={2}
+                  stroke-width="2"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     d="M9 12l2 2 4-4m-7 8h6a2 2 0 002-2v-5a2 2 0 00-2-2H7a2 2 0 00-2 2v5a2 2 0 002 2z"
-                  />
+                  ></path>
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">

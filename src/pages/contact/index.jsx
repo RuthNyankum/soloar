@@ -3,12 +3,12 @@ import { FaClock, FaMailBulk, FaMapPin, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <div className="bg-gray-50 py-20">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div className="bg-gray-50  font-sans mb-8">
+      <div className="max-w-6xl mx-auto px-4 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 ">
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <div className="bg-white p-8 rounded-xl shadow-lg mt-8 mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat">
               Get In Touch
             </h2>
             <form className="space-y-6">
@@ -18,7 +18,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </div>
 
@@ -28,7 +28,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </div>
 
@@ -38,7 +38,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="tel"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </div>
 
@@ -48,13 +48,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors font-semibold"
+                className="w-full bg-white border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold"
               >
                 Send Message
               </button>
@@ -62,7 +62,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 mt-8 mb-8">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Contact Information

@@ -125,8 +125,20 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-sm text-gray-500">
-          <p>© {currentYear} Solar. All rights reserved.</p>
-          <p className="mt-2">Made with ❤️ Ruth</p>
+          <p>
+            © {currentYear} Automated Irrigation Solution. All rights reserved.
+          </p>
+          <p className="mt-2">
+            Made with ❤️{' '}
+            <a
+              href="https://github.com/RuthNyankum"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white "
+            >
+              Ruth
+            </a>
+          </p>
         </div>
       </div>
     </footer>

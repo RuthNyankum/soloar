@@ -1,3 +1,12 @@
+.custom-pagination .swiper-pagination-bullet {
+  background-color: #d1fae5;
+  opacity: 1;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #22c55e;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import 'tailwindcss';

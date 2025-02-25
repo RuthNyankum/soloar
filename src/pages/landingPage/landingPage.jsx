@@ -19,9 +19,9 @@ const LandingPage = () => {
       <section id="products">
         <Product />
       </section>
-      {/* <section id="contact-us">
+      <section id="contact-us">
         <Contact />
-      </section> */}
+      </section>
       <Footer />
     </div>
   );
