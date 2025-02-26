@@ -42,20 +42,21 @@ const Footer = () => {
                   Home
                 </a>
               </li>
-              <li>
-                <a
-                  href="#projects"
-                  className="hover:text-white transition duration-300"
-                >
-                  Projects
-                </a>
-              </li>
+
               <li>
                 <a
                   href="#about-us"
                   className="hover:text-white transition duration-300"
                 >
                   About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#products"
+                  className="hover:text-white transition duration-300"
+                >
+                  Products
                 </a>
               </li>
               <li>

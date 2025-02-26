@@ -1,6 +1,5 @@
 import React from 'react';
 import img1 from '../../assets/images/img1.webp';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
