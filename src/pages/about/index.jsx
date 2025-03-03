@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import img from '../../assets/images/img2.webp';
 import img1 from '../../assets/images/img5.webp';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const ProjectSection = () => {
+  // Using framer-motion's useInView hook for triggering animations
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const controls = useAnimation();
+
+  // Effect to trigger animation when section is in view
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24 font-sans">
-      {/* Image Section */}
-      <div className="relative w-full max-w-lg mx-auto md:max-w-none">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24 font-sans w-full mx-auto">
+      {/* Image Section with animation */}
+      {/* Fixed: Added position-relative to properly contain absolute elements */}
+      <div className="relative">
         <div className="aspect-square rounded-lg overflow-hidden">
           <img
             src={img}
@@ -14,9 +32,9 @@ const ProjectSection = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        {/* Decorative elements - hidden on mobile */}
-        <div className="hidden md:block absolute -bottom-6 -right-6 w-48 h-48 bg-green-100 rounded-lg -z-10"></div>
-        <div className="hidden md:block absolute -top-6 -left-6 w-48 h-48 border-2 border-green-500 rounded-lg -z-10"></div>
+        {/* Fixed: Changed negative positioning to positive with transform */}
+        <div className="hidden md:block absolute bottom-0 right-0 w-48 h-48 bg-green-100 rounded-lg -z-10 transform translate-y-6 translate-x-6"></div>
+        <div className="hidden md:block absolute top-0 left-0 w-48 h-48 border-2 border-green-500 rounded-lg -z-10 transform -translate-y-6 -translate-x-6"></div>
       </div>
 
       {/* Content Section */}
@@ -34,21 +52,12 @@ const ProjectSection = () => {
             smallholder farmers with a reliable and cost-effective water supply
             solution. The system regulates water usage based on soil moisture
             levels, reducing water wastage and optimizing crop hydration.
-            {/* An automated solar-powered irrigation system designed to provide
-            smallholder farmers with a reliable and cost-effective water supply
-            solution. The system regulates water usage based on soil moisture
-            levels, reducing water wastage and optimizing crop hydration. */}
           </p>
 
           <p className="text-sm md:text-base">
             To provide smallholder farmers with affordable, reliable and
             sustainable automated solar powered irrigation system that can boost
             their yeild, prevent crop failure and boost income
-            {/* Our system harnesses solar energy to provide consistent water
-            supply, directly addressing one of the most critical challenges
-            facing local farmers. This technology not only improves crop yields
-            but also strengthens community resilience against climate change
-            impacts. */}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-6">
@@ -116,24 +125,62 @@ const ProjectSection = () => {
             </div>
           </div>
         </div>
-
-        {/* <button className="w-full sm:w-auto mt-8 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors">
-          Learn More About Our Impact
-        </button> */}
       </div>
     </div>
   );
 };
 
 const InnovatorSection = () => {
-  return (
-    <div className="bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-12 relative overflow-hidden font-sans">
-      {/* Background decoration - adjusted for mobile */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-green-100 -skew-x-12 transform origin-top-right"></div>
+  // Track whether the element is in the viewport
+  const [ref, inView] = useInView({
+    triggerOnce: false, // This allows the animation to trigger multiple times
+    threshold: 0.2, // Triggers when 20% of the element is visible
+    rootMargin: '-50px', // Slight offset to make animation feel more natural
+  });
 
+  const controls = useAnimation();
+
+  // Effect to trigger animation when section is in view
+  useEffect(() => {
+    if (inView) {
+      // Start the animation when in view
+      controls.start('visible');
+    } else {
+      // Reset to hidden when out of view
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  // Animation variants for sliding
+  const slideVariants = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  return (
+    // Fixed: Added overflow-hidden to ensure skewed element doesn't cause horizontal scroll
+    <div className="bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-12 relative overflow-hidden font-sans w-full">
+      {/* Fixed: Adjusted the skewed background to stay within container */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-green-100 -skew-x-6 transform origin-top-right"></div>
       <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center">
-        {/* Image Column */}
-        <div className="md:col-span-1">
+        {/* Image Column with animation - Note the ref is here */}
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={slideVariants}
+          className="md:col-span-1"
+        >
           <div className="relative max-w-[200px] md:max-w-none mx-auto">
             <div className="aspect-square rounded-full overflow-hidden border-4 border-white shadow-xl">
               <img
@@ -142,13 +189,14 @@ const InnovatorSection = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            {/* "Lead Innovator" label remains unchanged since it's not causing overflow */}
             <div className="absolute -bottom-4 right-0 bg-primary text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold">
               Lead Innovator
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Content Column */}
+        {/* Content Column (remaining code unchanged) */}
         <div className="md:col-span-2 space-y-4 md:space-y-6">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 font-montserrat">
@@ -239,8 +287,9 @@ const InnovatorSection = () => {
 
 const About = () => {
   return (
-    <div className="bg-white py-8 md:py-16">
-      <div className="max-w-6xl mx-auto px-4">
+    // Fixed: Added overflow-x-hidden to the main container
+    <div className="bg-white py-8 md:py-16 overflow-x-hidden">
+      <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="font-montserrat font-bold text-3xl mb-2">About Us</h1>
         <ProjectSection />
         <InnovatorSection />
