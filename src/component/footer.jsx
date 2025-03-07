@@ -1,12 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
-import {
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-  FaFacebook,
-  FaInstagram,
-} from 'react-icons/fa';
+import { FaInstagram, FaTiktok } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -87,38 +81,29 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-4 mb-4">
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition duration-300"
-            aria-label="GitHub"
-          >
-            <FaGithub size={20} />
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition duration-300"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin size={20} />
-          </a>
-          <a
+          {/* <a
             href="#"
             className="text-gray-400 hover:text-white transition duration-300"
             aria-label="Twitter"
           >
             <FaTwitter size={20} />
-          </a>
+          </a> */}
           <a
-            href="#"
+            href="https://www.tiktok.com/@afuomborga?lang=en"
             className="text-gray-400 hover:text-white transition duration-300"
-            aria-label="Facebook"
+            aria-label="Tiktok"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <FaFacebook size={20} />
+            <FaTiktok size={20} />
           </a>
+
           <a
-            href="#"
+            href="https://www.instagram.com/afuomborga/"
             className="text-gray-400 hover:text-white transition duration-300"
             aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaInstagram size={20} />
           </a>
