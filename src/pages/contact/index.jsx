@@ -3,7 +3,7 @@ import { FaClock, FaMailBulk, FaMapPin, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <div className="bg-gray-50  font-sans mb-8">
+    <div className="bg-gray-100  font-sans">
       <div className="max-w-6xl mx-auto px-4 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 ">
           {/* Contact Form */}
@@ -92,7 +92,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                  <p className="text-gray-600">+233 XX XXX XXXX</p>
+                  <p className="text-gray-600">+233 24 750 8454</p>
                 </div>
               </div>
 
@@ -102,7 +102,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600">contact@solarirrigationgh.com</p>
+                  <p className="text-gray-600">afuomborga@gmail.com</p>
                 </div>
               </div>
 

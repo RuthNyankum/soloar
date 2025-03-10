@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import img from '../../assets/images/img2.webp';
 import img1 from '../../assets/images/img5.webp';
+import innovator from '../../assets/images/Richard.png';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -184,7 +185,7 @@ const InnovatorSection = () => {
           <div className="relative max-w-[200px] md:max-w-none mx-auto">
             <div className="aspect-square rounded-full overflow-hidden border-4 border-white shadow-xl">
               <img
-                src={img1}
+                src={innovator}
                 alt="Richard Ankrah Amponsah - Lead Innovator"
                 className="w-full h-full object-cover"
               />
@@ -288,7 +289,7 @@ const InnovatorSection = () => {
 const About = () => {
   return (
     // Fixed: Added overflow-x-hidden to the main container
-    <div className="bg-white py-8 md:py-16 overflow-x-hidden">
+    <div className="bg-gray-100 py-8 md:py-16 overflow-x-hidden">
       <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="font-montserrat font-bold text-3xl mb-2">About Us</h1>
         <ProjectSection />

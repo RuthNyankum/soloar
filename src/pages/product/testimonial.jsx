@@ -3,41 +3,41 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import img from '../../assets/images/img5.webp';
+import img1 from '../../assets/images/client1.jpg';
+import img2 from '../../assets/images/client2.jpg';
+import img3 from '../../assets/images/client3.jpg';
+import img4 from '../../assets/images/client4.jpg';
 
 const testimonials = [
-  // {
-  //   name: 'Amara Johnson',
-  //   feedback:
-  //     'This automated irrigation system has saved me so much time and water! My crops are thriving like never before.',
-  //   image:
-  //     'https://images.unsplash.com/photo-1502767089025-6572583495f2?crop=faces&fit=crop&w=80&h=80',
-  // },
+  {
+    name: 'Ama Atta',
+    feedback:
+      'This automated irrigation system has saved me so much time and water! My crops are thriving like never before.',
+    image: img1,
+  },
   {
     name: 'Kwame Mensah',
     feedback:
       'I no longer worry about overwatering or underwatering my plants. It’s incredibly efficient and easy to use.',
-    image:
-      'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=faces&fit=crop&w=80&h=80',
+    image: img2,
   },
   {
     name: 'Fatima Ali',
     feedback:
       'Affordable and effective. I recommend this system to all small-scale farmers looking for cost-effective solutions.',
-    image: img,
+    image: img3,
   },
   {
     name: 'Ama Pokua',
     feedback:
       'The best investment for my farm! It’s user-friendly and helps me optimize water usage.',
-    image:
-      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?crop=faces&fit=crop&w=80&h=80',
+    image: img4,
   },
 ];
 
 const TestimonialSection = () => {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-gray-100">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
           What Our Farmers Say
