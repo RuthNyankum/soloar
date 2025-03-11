@@ -68,8 +68,9 @@ const Contact = () => {
                 Contact Information
               </h2>
               <p className="text-gray-600 mb-8">
-                Have questions about our solar irrigation solutions? We're here
-                to help! Reach out to us using any of the following methods.
+                Have questions about our automated Irrigation solutions? We're
+                here to help! Reach out to us using any of the following
+                methods.
               </p>
             </div>
 
@@ -81,7 +82,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
                   <p className="text-gray-600">
-                    Nkronza South, Bono East Region, Ghana
+                    Akumsa Domase-Hillstar Street, Bono East Region, Ghana
                   </p>
                 </div>
               </div>
@@ -93,6 +94,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                   <p className="text-gray-600">+233 24 750 8454</p>
+                  <p className="text-gray-600">+233 50 750 5773</p>
                 </div>
               </div>
 
@@ -102,6 +104,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                  <p className="text-gray-600"> amponsahrichard923@gmail.com</p>
                   <p className="text-gray-600">afuomborga@gmail.com</p>
                 </div>
               </div>
@@ -115,9 +118,9 @@ const Contact = () => {
                     Business Hours
                   </h3>
                   <p className="text-gray-600">
-                    Monday - Friday: 8:00 AM - 5:00 PM
+                    Monday - Saturday: 8:00 AM - 5:00 PM
                   </p>
-                  <p className="text-gray-600">Saturday: 9:00 AM - 2:00 PM</p>
+                  {/* <p className="text-gray-600">Saturday: 9:00 AM - 2:00 PM</p> */}
                 </div>
               </div>
             </div>

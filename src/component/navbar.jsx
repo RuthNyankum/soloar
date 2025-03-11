@@ -62,7 +62,7 @@ const Navbar = () => {
               className="w-16 h-auto transform hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
             />
             <span className="text-xl font-bold text-primary font-montserrat">
-              Automated Irrigation
+              AfuomBorga Innovations
             </span>
           </div>
 

@@ -1,29 +1,29 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-gray-300 pt-10 pb-4 font-sans">
+    <footer className="bg-gray-800 text-gray-300 pt-10 pb-4 font-sans text-center">
       <div className="max-w-6xl mx-auto px-4">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
           {/* Logo and Name */}
-          <div className="flex items-center gap-1">
+          <div className="flex flex-col items-center md:items-start gap-1">
             <img
               src={logo}
               alt="logo"
               className="w-16 h-auto transform hover:scale-105 transition-transform duration-300 rounded-lg shadow-lg"
             />
             <span className="text-xl font-bold text-white font-montserrat">
-              Automated Irrigation
+              AfuomBorga Innovation
             </span>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-xl font-bold text-white mb-4 font-montserrat">
               Quick Links
             </h4>
@@ -36,7 +36,6 @@ const Footer = () => {
                   Home
                 </a>
               </li>
-
               <li>
                 <a
                   href="#about-us"
@@ -65,7 +64,7 @@ const Footer = () => {
           </div>
 
           {/* About Us */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-xl font-bold text-white mb-4 font-montserrat">
               About Us
             </h4>
@@ -81,13 +80,15 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-4 mb-4">
-          {/* <a
-            href="#"
+          <a
+            href=" https://www.facebook.com/profile.php?id=61574065675462"
             className="text-gray-400 hover:text-white transition duration-300"
-            aria-label="Twitter"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <FaTwitter size={20} />
-          </a> */}
+            <FaFacebook size={20} />
+          </a>
           <a
             href="https://www.tiktok.com/@afuomborga?lang=en"
             className="text-gray-400 hover:text-white transition duration-300"
@@ -97,7 +98,6 @@ const Footer = () => {
           >
             <FaTiktok size={20} />
           </a>
-
           <a
             href="https://www.instagram.com/afuomborga/"
             className="text-gray-400 hover:text-white transition duration-300"
@@ -120,7 +120,7 @@ const Footer = () => {
               href="https://github.com/RuthNyankum"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white "
+              className="text-white"
             >
               Ruth
             </a>

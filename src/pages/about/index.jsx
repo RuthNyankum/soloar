@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import img from '../../assets/images/img2.webp';
-import img1 from '../../assets/images/img5.webp';
 import innovator from '../../assets/images/Richard.png';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const ProjectSection = () => {
-  // Using framer-motion's useInView hook for triggering animations
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.2,
@@ -23,8 +21,7 @@ const ProjectSection = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24 font-sans w-full mx-auto">
-      {/* Image Section with animation */}
-      {/* Fixed: Added position-relative to properly contain absolute elements */}
+      {/* Image Section */}
       <div className="relative">
         <div className="aspect-square rounded-lg overflow-hidden">
           <img
@@ -33,7 +30,7 @@ const ProjectSection = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        {/* Fixed: Changed negative positioning to positive with transform */}
+
         <div className="hidden md:block absolute bottom-0 right-0 w-48 h-48 bg-green-100 rounded-lg -z-10 transform translate-y-6 translate-x-6"></div>
         <div className="hidden md:block absolute top-0 left-0 w-48 h-48 border-2 border-green-500 rounded-lg -z-10 transform -translate-y-6 -translate-x-6"></div>
       </div>
@@ -141,10 +138,8 @@ const InnovatorSection = () => {
 
   const controls = useAnimation();
 
-  // Effect to trigger animation when section is in view
   useEffect(() => {
     if (inView) {
-      // Start the animation when in view
       controls.start('visible');
     } else {
       // Reset to hidden when out of view
@@ -169,12 +164,10 @@ const InnovatorSection = () => {
   };
 
   return (
-    // Fixed: Added overflow-hidden to ensure skewed element doesn't cause horizontal scroll
     <div className="bg-green-50 rounded-2xl md:rounded-3xl p-6 md:p-12 relative overflow-hidden font-sans w-full">
-      {/* Fixed: Adjusted the skewed background to stay within container */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-green-100 -skew-x-6 transform origin-top-right"></div>
       <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center">
-        {/* Image Column with animation - Note the ref is here */}
+        {/* Image  */}
         <motion.div
           ref={ref}
           initial="hidden"
@@ -183,21 +176,20 @@ const InnovatorSection = () => {
           className="md:col-span-1"
         >
           <div className="relative max-w-[200px] md:max-w-none mx-auto">
-            <div className="aspect-square rounded-full overflow-hidden border-4 border-white shadow-xl">
+            <div className="aspect-square rounded-full overflow-hidden border-4 border-green-200 shadow-xl">
               <img
                 src={innovator}
-                alt="Richard Ankrah Amponsah - Lead Innovator"
+                alt="Richard Ankrah Amponsah -CEO"
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* "Lead Innovator" label remains unchanged since it's not causing overflow */}
+            {/*CEO*/}
             <div className="absolute -bottom-4 right-0 bg-primary text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold">
-              Lead Innovator
+              CEO
             </div>
           </div>
         </motion.div>
 
-        {/* Content Column (remaining code unchanged) */}
         <div className="md:col-span-2 space-y-4 md:space-y-6">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 font-montserrat">
@@ -288,7 +280,6 @@ const InnovatorSection = () => {
 
 const About = () => {
   return (
-    // Fixed: Added overflow-x-hidden to the main container
     <div className="bg-gray-100 py-8 md:py-16 overflow-x-hidden">
       <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="font-montserrat font-bold text-3xl mb-2">About Us</h1>
